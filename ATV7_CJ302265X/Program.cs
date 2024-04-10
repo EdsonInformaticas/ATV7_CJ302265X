@@ -44,10 +44,11 @@ namespace ATV7_CJ302265X
                             Console.WriteLine("Até que número deseja contar?");
                             numero = int.Parse(Console.ReadLine());
                             Console.Clear();
-                            while (cont <= numero)
-                            {
-                                Console.WriteLine("{0}", cont); cont++;
-                            }
+                            do {
+                                Console.WriteLine("{0}", cont);
+                                cont++;
+                            }while (cont <= numero);
+                                
                             Thread.Sleep(2000);
                             break;
                         }
@@ -61,11 +62,13 @@ namespace ATV7_CJ302265X
                             Console.WriteLine("Até q número deseja contar?(os números pares)");
                             nmr = int.Parse(Console.ReadLine());
                             Console.Clear();
-                            while (cont <= nmr)
+                            do
                             {
                                 Console.WriteLine("{0}", cont);
                                 cont = cont + 2;
-                            }
+
+                            } while (cont <= nmr);
+                            
                             Thread.Sleep(2000);
                             break;
                         }
@@ -79,11 +82,12 @@ namespace ATV7_CJ302265X
                             Console.WriteLine("Insira um número menor que 1000");
                             nmr1 = int.Parse(Console.ReadLine());
                             Console.Clear();
-                            while (cont >= nmr1)
+                            do
                             {
                                 Console.WriteLine("{0}", cont);
                                 cont = cont - 2;
-                            }
+                            } while (cont >= nmr1);
+                            
                             Thread.Sleep(2000);
                             break;
                         }
@@ -94,14 +98,14 @@ namespace ATV7_CJ302265X
 
                             int nmr2, cont = 0;
                             Console.Clear();
-                            while (cont < 200)
+                            do
                             {
-
                                 Console.WriteLine("Escreva um número para somar, iremos parar de somar caso a soma dos números seja igual ou maior que 200");
                                 nmr2 = int.Parse(Console.ReadLine());
                                 Console.Clear();
                                 cont = cont + nmr2;
-                            }
+                            } while (cont < 200);
+                            
                             Thread.Sleep(2000);
                             break;
                         }
@@ -115,12 +119,13 @@ namespace ATV7_CJ302265X
                             Console.WriteLine("Digite o número que deseja descobrir os divisores");
                             nmr3 = int.Parse(Console.ReadLine());
                             Console.Clear();
-                            while (cont < nmr3)
+                            do
                             {
                                 if (nmr3 % cont == 0)
                                     Console.WriteLine("{0}", cont);
                                 cont++;
-                            }
+                            }while (cont < nmr3);
+                            
                             Thread.Sleep(2000);
                             break;
                         }
@@ -136,7 +141,7 @@ namespace ATV7_CJ302265X
                             //PROJETO 7
                             int nmr4 = 0, pares = 0, impares = 0;
                             Console.Clear();
-                            while (true)
+                            do
                             {
                                 Console.WriteLine("Digite um valor, somaremos os ímpares e os pares, se digitar '0' o programa é encerrado");
                                 nmr4 = int.Parse(Console.ReadLine());
@@ -152,8 +157,8 @@ namespace ATV7_CJ302265X
                                     pares = pares + nmr4;
                                 else
                                     impares = impares + nmr4;
-
-                            }
+                            } while (true);
+                            
                             Thread.Sleep(2000);
                             break;
                         }
